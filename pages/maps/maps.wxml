@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="usermotto">
+   <map longitude="{{lag}}" latitude="{{lat}}"></map>
+  </view>
+</view>

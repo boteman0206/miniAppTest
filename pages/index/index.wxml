@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <block>
+        <view>{{ msg }}</view>
+        <button wx:if="{{!msg}}" bindtap="clickMe">点击我</button>
+    </block>
+  </view>
+  <view class="usermotto" >
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="operation">
+    <navigator url="../../pages/maps/maps">
+      <image src="../static/Healthy.png"  scaleToFill style="width: 130px; height: 50px"></image>
+      <view>地图界面展示</view>
+    </navigator>
+  </view>
+
+  <view class="operation">
+    <navigator url="../../pages/location/location">
+      <image src="../static/tips.png"  scaleToFill style="width: 130px; height: 50px"></image>
+      <view class="u1">获取经度和维度信息</view>
+    </navigator>
+  </view>
+
+
+</view>
