@@ -2,5 +2,6 @@
 <view class="container">
   <view class="usermotto">
    <map longitude="{{lag}}" latitude="{{lat}}"></map>
+    <image style="width: 200px; height: 200px; background-color: #eeeeee;"  src="{{current}}"></image>
   </view>
 </view>
